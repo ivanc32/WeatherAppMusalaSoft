@@ -1,4 +1,4 @@
-package com.musalasoft.weatherapp.ui.view.fragments
+package com.musalasoft.weatherapp.ui.view.dialogs
 
 import android.app.Dialog
 import android.content.Context

@@ -21,7 +21,7 @@ import com.google.android.gms.location.LocationServices
 import com.musalasoft.weatherapp.R
 import com.musalasoft.weatherapp.data.model.ErrorType
 import com.musalasoft.weatherapp.databinding.ActivityMainBinding
-import com.musalasoft.weatherapp.ui.view.fragments.ProgressBarDialog
+import com.musalasoft.weatherapp.ui.view.dialogs.ProgressBarDialog
 import com.musalasoft.weatherapp.ui.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 

@@ -3,6 +3,7 @@ package com.musalasoft.weatherapp.ui.view.activities
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
+import android.location.Location
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.View
@@ -133,10 +134,10 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) == PackageManager.PERMISSION_GRANTED
         ) {
-            fusedLocationClient.lastLocation.addOnSuccessListener {
+            fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
                 viewModel.searchWeatherByCoordinates(
-                    longitude = it.longitude,
-                    latitude = it.latitude
+                    longitude = location?.longitude,
+                    latitude = location?.latitude
                 )
             }
         } else {

@@ -46,24 +46,29 @@ class MainViewModel : ViewModel() {
      * @param longitude [Double]
      * @param latitude [Double]
      */
-    fun searchWeatherByCoordinates(longitude: Double, latitude: Double) {
-        if (isInternetConnected) {
-            errorType.set(ErrorType.NONE)
+    fun searchWeatherByCoordinates(longitude: Double?, latitude: Double?) {
+        if (longitude != null && latitude != null) {
 
-            viewModelScope.launch(Dispatchers.Default) {
-                isSearchInProgressLiveData.postValue(true)
-                val getWeatherByCoordinatesApiCall = withContext(Dispatchers.IO) {
-                    ApiService.getWeatherByCoordinates(latitude, longitude)
+            if (isInternetConnected) {
+                errorType.set(ErrorType.NONE)
+
+                viewModelScope.launch(Dispatchers.Default) {
+                    isSearchInProgressLiveData.postValue(true)
+                    val getWeatherByCoordinatesApiCall = withContext(Dispatchers.IO) {
+                        ApiService.getWeatherByCoordinates(latitude, longitude)
+                    }
+
+                    searchWeather(getWeatherByCoordinatesApiCall)
+
+                    isSearchInProgressLiveData.postValue(false)
                 }
-
-                searchWeather(getWeatherByCoordinatesApiCall)
-
-                isSearchInProgressLiveData.postValue(false)
+            } else {
+                setErrorDetails(
+                    "network error", ErrorType.NETWORK
+                )
             }
         } else {
-            setErrorDetails(
-                "network error", ErrorType.NETWORK
-            )
+            setErrorDetails("no location", ErrorType.LOCATION)
         }
     }
 

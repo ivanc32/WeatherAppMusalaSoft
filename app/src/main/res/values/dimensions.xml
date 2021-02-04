@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="weatherCityMarginHorizontal">20dp</dimen>
+    <dimen name="weatherConditionsIconHeight">130dp</dimen>
+    <dimen name="weatherCityTextSize">50sp</dimen>
+    <dimen name="weatherTemperatureTextSize">50sp</dimen>
+    <dimen name="weatherTemperatureDetailsTextSize">20sp</dimen>
+    <dimen name="weatherConditionsTextSize">20sp</dimen>
+
+    <dimen name="searchBarHeight">40dp</dimen>
+    <dimen name="searchBarMarginHorizontal">5dp</dimen>
+    <dimen name="searchBarMarginTop">10dp</dimen>
+
+    <dimen name="searchQueryPaddingHorizontal">10dp</dimen>
+
+    <dimen name="searchButtonWidth">50dp</dimen>
+    <dimen name="searchButtonPaddingHorizontal">10dp</dimen>
+
+    <dimen name="errorIconWidth">100dp</dimen>
+    <dimen name="errorIconHeight">100dp</dimen>
+    <dimen name="errorMessageTextSize">25sp</dimen>
+</resources>

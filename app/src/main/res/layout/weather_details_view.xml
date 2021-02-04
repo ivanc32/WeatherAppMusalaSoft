@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <TextView
+        android:id="@+id/tv_weatherDetails_cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/weatherCityMarginHorizontal"
+        android:textAlignment="center"
+        android:textSize="@dimen/weatherCityTextSize"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/iv_weatherDetails_conditionsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/weatherConditionsIconHeight"
+        android:contentDescription="@string/description_weather_conditions_icon"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintRight_toLeftOf="@id/gl_weatherDetails_verticalCenter"
+        app:layout_constraintTop_toBottomOf="@id/tv_weatherDetails_cityName" />
+
+
+    <TextView
+        android:id="@+id/tv_weatherDetails_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/weatherTemperatureTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/iv_weatherDetails_conditionsIcon"
+        app:layout_constraintLeft_toRightOf="@id/gl_weatherDetails_verticalCenter"
+        app:layout_constraintTop_toTopOf="@id/iv_weatherDetails_conditionsIcon" />
+
+    <TextView
+        android:id="@+id/tv_weatherDetails_temperatureDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/weatherTemperatureDetailsTextSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_weatherDetails_conditionsIcon" />
+
+    <TextView
+        android:id="@+id/tv_weatherDetails_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/weatherConditionsTextSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_weatherDetails_temperatureDetails" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_weatherDetails_verticalCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</merge>

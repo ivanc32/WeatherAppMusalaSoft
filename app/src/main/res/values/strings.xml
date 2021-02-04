@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+
+    <string name="description_search_bar_background">Search bar background</string>
+    <string name="description_search_button">Search button</string>
+    <string name="description_error_location_icon">Error location icon</string>
+    <string name="description_error_network_icon">Error network icon</string>
+    <string name="description_error_search_icon">Error search icon</string>
+    <string name="description_weather_conditions_icon">Weather conditions icon</string>
+
+    <string name="hint_search_query">Search…</string>
+</resources>

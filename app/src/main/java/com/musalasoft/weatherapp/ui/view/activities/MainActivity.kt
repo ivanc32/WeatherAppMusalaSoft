@@ -76,10 +76,10 @@ class MainActivity : AppCompatActivity() {
                         ) ==
                                 PackageManager.PERMISSION_GRANTED)
                     ) {
-                        fusedLocationClient.lastLocation.addOnSuccessListener {
+                        fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
                             viewModel.searchWeatherByCoordinates(
-                                longitude = it.longitude,
-                                latitude = it.latitude
+                                longitude = location?.longitude,
+                                latitude = location?.latitude
                             )
                         }
                     }
